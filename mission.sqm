@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=71;
+		nextID=99;
 	};
 	class Camera
 	{
-		pos[]={8327.9736,149.46049,8478.2842};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={3599.9731,28,3197.1948};
+		dir[]={0.57839161,-0.56637251,0.58711922};
+		up[]={0.39747906,0.824148,0.4034774};
+		aside[]={0.71239007,2.1056621e-008,-0.70179951};
 	};
 };
 binarizationWanted=0;
@@ -4398,7 +4398,7 @@ class Mission
 							name="VehStore4_planeSpawn";
 							type="Empty";
 							colorName="ColorBlack";
-							angle=7.1044421;
+							angle=7.1044416;
 							id=620;
 						};
 						class Item42
@@ -4430,7 +4430,7 @@ class Mission
 							name="Parking4_spawn";
 							type="Empty";
 							colorName="ColorBlack";
-							angle=7.1048245;
+							angle=7.1048241;
 							id=649;
 						};
 						class Item45
@@ -4439,7 +4439,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={803.04498,-18.784082,768.12872};
-								angles[]={0,1.8470953,-0};
+								angles[]={0,1.8470953,0};
 							};
 							side="Empty";
 							flags=1;
@@ -4457,7 +4457,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={821.00043,-18.773159,756.83362};
-								angles[]={0,0.26911366,-0};
+								angles[]={0,0.26911366,0};
 							};
 							side="Empty";
 							flags=1;
@@ -4475,7 +4475,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={797.69867,-18.78783,748.87329};
-								angles[]={0,1.8470953,-0};
+								angles[]={0,1.8470953,0};
 							};
 							side="Empty";
 							flags=1;
@@ -4807,12 +4807,12 @@ class Mission
 						class Item0
 						{
 							dataType="Marker";
-							position[]={1069.8778,3.907824,682.50037};
+							position[]={1067.5115,3.907824,682.50037};
 							name="GunStore1_objSpawn";
 							type="Empty";
 							colorName="ColorBlack";
 							id=337;
-							atlOffset=0.0043668747;
+							atlOffset=0.05358696;
 						};
 						class Item1
 						{
@@ -4846,7 +4846,7 @@ class Mission
 						};
 					};
 					id=678;
-					atlOffset=0.23796749;
+					atlOffset=0.26212502;
 				};
 				class Item1
 				{
@@ -5011,7 +5011,7 @@ class Mission
 				};
 			};
 			id=670;
-			atlOffset=-324.39285;
+			atlOffset=-324.39075;
 		};
 		class Item56
 		{
@@ -5155,17 +5155,16 @@ class Mission
 						class Item3
 						{
 							dataType="Marker";
-							position[]={8019.1563,35.526829,10130.859};
+							position[]={8019.1563,29.635311,10130.859};
 							name="VehStore2_planeSpawn";
 							type="Empty";
 							colorName="ColorBlack";
 							angle=265;
 							id=346;
-							atlOffset=5.8915176;
 						};
 					};
 					id=674;
-					atlOffset=4.2866001;
+					atlOffset=1.3408413;
 				};
 				class Item2
 				{
@@ -5187,22 +5186,21 @@ class Mission
 						class Item1
 						{
 							dataType="Marker";
-							position[]={3619.5505,2.5599999,3208.9866};
+							position[]={3619.5505,2.5599999,3221.2786};
 							name="VehStore3_landSpawn";
 							type="Empty";
 							colorName="ColorBlack";
 							id=347;
-							atlOffset=0.062497854;
 						};
 						class Item2
 						{
 							dataType="Marker";
-							position[]={3624.0151,0,3196.5474};
+							position[]={3624.0151,-0.29248032,3192.5991};
 							name="VehStore3_seaSpawn";
 							type="Empty";
 							colorName="ColorBlack";
 							id=348;
-							atlOffset=8.9120665;
+							atlOffset=12.675189;
 						};
 						class Item3
 						{
@@ -5239,11 +5237,11 @@ class Mission
 						};
 					};
 					id=675;
-					atlOffset=-0.74000025;
+					atlOffset=-0.81312037;
 				};
 			};
 			id=672;
-			atlOffset=-344.12628;
+			atlOffset=-344.86102;
 		};
 		class Item57
 		{
@@ -6446,7 +6444,7 @@ class Mission
 							fillName="DiagGrid";
 							a=120;
 							b=120;
-							angle=114.01296;
+							angle=114.01295;
 							id=314;
 							atlOffset=-21.404921;
 						};
@@ -6461,7 +6459,7 @@ class Mission
 							fillName="DiagGrid";
 							a=90;
 							b=110;
-							angle=105.95996;
+							angle=105.95995;
 							id=320;
 							atlOffset=-224.3318;
 						};
