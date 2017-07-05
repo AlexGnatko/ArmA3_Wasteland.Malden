@@ -1,1 +1,1 @@
-# ARMA3-ArmA3_Wasteland.Malden
+# ArmA3_Wasteland.Malden
