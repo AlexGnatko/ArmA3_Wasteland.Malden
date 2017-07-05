@@ -36,5 +36,5 @@ _waypoints =
 	getMarkerPos "int_31",
 	getMarkerPos "int_32",
 	getMarkerPos "int_33",
-	getMarkerPos "int_34",
+	getMarkerPos "int_34"
 ];
