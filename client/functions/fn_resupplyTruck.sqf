@@ -78,7 +78,7 @@ _resupplyThread = [_vehicle, _unit] spawn
 			{
 				// Make sure the server sets the current client as the vehicle owner
 				// (to enable "local _vehicle == true")
-				[_vehicle, player] remoteExec ["enableLocal", 2];
+				[_vehicle, player] remoteExec ["ensureLocal", 2];
 
 				_pauseText = "Take back control of the vehicle.";
 				_abortText = "Another player took control of the vehicle.";
