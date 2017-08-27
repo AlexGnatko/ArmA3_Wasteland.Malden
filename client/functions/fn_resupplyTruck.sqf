@@ -76,9 +76,9 @@ _resupplyThread = [_vehicle, _unit] spawn
 			_checkCondition = {!local _vehicle};
 			if (call _checkCondition) exitWith
 			{
-                // Make sure the server sets the current client as the vehicle owner
-                // (to enable "local _vehicle == true")
-                [_vehicle, player] remoteExec ["enableLocal", 2];
+				// Make sure the server sets the current client as the vehicle owner
+				// (to enable "local _vehicle == true")
+				[_vehicle, player] remoteExec ["enableLocal", 2];
 
 				_pauseText = "Take back control of the vehicle.";
 				_abortText = "Another player took control of the vehicle.";
