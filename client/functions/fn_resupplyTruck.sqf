@@ -41,7 +41,7 @@ _resupplyThread = [_vehicle, _unit] spawn
 	_price = 1000; // price = 1000 for vehicles not found in vehicle store
 
 	_variant = _vehicle getVariable ["A3W_vehicleVariant", ""];
-	if (_variant != "") then { _variant = "variant_" + _variant };
+	if (_variant != "") then { _variant = "variant_" + _variant; };
 
 	{
 		if (_vehClass == _x select 1 && (_variant == "" || {_variant in _x})) exitWith
@@ -76,6 +76,10 @@ _resupplyThread = [_vehicle, _unit] spawn
 			_checkCondition = {!local _vehicle};
 			if (call _checkCondition) exitWith
 			{
+                // Make sure the server sets the current client as the vehicle owner
+                // (to enable "local _vehicle == true")
+                [_vehicle, player] remoteExec ["enableLocal", 2];
+
 				_pauseText = "Take back control of the vehicle.";
 				_abortText = "Another player took control of the vehicle.";
 			};
@@ -116,7 +120,7 @@ _resupplyThread = [_vehicle, _unit] spawn
 		{
 			private "_i";
 
-			for [{_i = RESUPPLY_TIMEOUT}, {_i > 0 && _checkCondition && !doCancelAction}, {_i = _i - 1}] do
+			for [{_i = RESUPPLY_TIMEOUT;}, {_i > 0 && _checkCondition && !doCancelAction}, {_i = _i - 1;}] do
 			{
 				_vehicle setVariable ["A3W_resupplyTruckTimeout", true];
 				titleText [format ["%1\n%2", _pauseText, format ["Resupply sequence timeout in %1", _i]], "PLAIN DOWN", 0.5];
@@ -215,7 +219,7 @@ _resupplyThread = [_vehicle, _unit] spawn
 				_pathArr = [_pathArrs, _path] call fn_getFromPairs;
 				_new = isNil "_pathArr";
 
-				if (_new) then { _pathArr = [] };
+				if (_new) then { _pathArr = [] ;};
 
 				_index = [_pathArr, _mag, 1] call fn_addToPairs;
 
