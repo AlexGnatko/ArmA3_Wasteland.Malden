@@ -41,7 +41,7 @@ class FAR_fnc_public_EH {};
 class mf_remote_refuel {};
 class mf_remote_repair {};
 class mf_remote_syphon {};
-class ensureLocal {};
+class ensureLocal { allowedTargets = 2; };
 
 // Third-party
 class A3W_fnc_addMagazineTurret {};
