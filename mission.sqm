@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=127;
+		nextID=155;
 	};
 	class Camera
 	{
@@ -3606,6 +3606,7 @@ class Mission
 					};
 					id=604;
 					type="C_Truck_02_box_F";
+					atlOffset=-0.00010871887;
 				};
 				class Item7
 				{
@@ -4397,7 +4398,7 @@ class Mission
 							name="VehStore4_planeSpawn";
 							type="Empty";
 							colorName="ColorBlack";
-							angle=7.1044412;
+							angle=7.1044402;
 							id=620;
 						};
 						class Item42
@@ -4429,7 +4430,7 @@ class Mission
 							name="Parking4_spawn";
 							type="Empty";
 							colorName="ColorBlack";
-							angle=7.1048236;
+							angle=7.1048226;
 							id=649;
 						};
 						class Item45
@@ -4591,7 +4592,7 @@ class Mission
 				};
 			};
 			id=588;
-			atlOffset=-30.496376;
+			atlOffset=-30.496559;
 		};
 		class Item52
 		{
@@ -6443,7 +6444,7 @@ class Mission
 							fillName="DiagGrid";
 							a=120;
 							b=120;
-							angle=114.01294;
+							angle=114.01292;
 							id=314;
 							atlOffset=-21.404921;
 						};
@@ -6458,7 +6459,7 @@ class Mission
 							fillName="DiagGrid";
 							a=90;
 							b=110;
-							angle=105.95995;
+							angle=105.95994;
 							id=320;
 							atlOffset=-224.3318;
 						};

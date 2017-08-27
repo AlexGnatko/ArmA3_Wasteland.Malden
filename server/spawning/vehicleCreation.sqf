@@ -7,20 +7,48 @@
 //	@file Created: 20/11/2012 05:19
 //	@file Args: markerPos [, vehicleType]
 
+// Modified by Alex Gnatko 27/08/2017
+
 if (!isServer) exitWith {};
 
 params ["_markerPos", ["_vehicleType","",[""]], ["_respawnSettings",nil,[[]]]];
-private ["_pos", "_vehicle", "_hitPoint"];
+private ["_pos", "_dir", "_posdir", "_result", "_vehicle", "_hitPoint"];
 
 //_pos = [_markerPos, 2, 25, 5, 0, 60 * (pi / 180), 0, [], [_markerPos]] call BIS_fnc_findSafePos;
 // diabled as a test. might break other features
 _pos = _markerPos;
 
+// by Alex Gnatko:
+// We need to cook this _pos to find a road, and also get a _dir
+
+// If there are no roads within 10 meters, find within 50, then within 100
+
+_posdir = [_pos, 10] call carSpawnParams;
+_result = _posdir select 0;
+if(!_result) then
+{
+    _posdir = [_pos, 50] call carSpawnParams;
+    _result = _posdir select 0;
+    if(!_result) then
+    {
+        _posdir = [_pos, 100] call carSpawnParams;
+        _result = _posdir select 0;
+        if(!_result) then
+        {
+            // Give up!
+            _posdir = [true, _pos, random 360];
+        };
+    };
+};
+
+_pos = _posdir select 1;
+_dir = _posdir select 2;
+
 //Car Initialization
 _vehicle = createVehicle [_vehicleType, _pos, [], 0, "None"];
 
 _vehicle setPosATL [_pos select 0, _pos select 1, 1.5];
-_vehicle setDir random 360;
+_vehicle setDir _dir;
 _vehicle setVelocity [0,0,0.01];
 
 _vehicle setDamage (random 0.5); // setDamage must always be called before vehicleSetup
